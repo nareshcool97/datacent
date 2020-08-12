@@ -2,7 +2,7 @@
 
 <h1>Datacenters |<b><%= link_to "Home", root_path %></h1>
 
-<table>
+<table border= '1'>
   <thead>
     <tr>
       <th>Code</th>
@@ -22,9 +22,9 @@
         <td><%= servercenter.servers_capacity %></td>
         <td><%= servercenter&.country&.name %></td>
         <td><%= servercenter&.country&.language&.name %></td>
-        <td><%= link_to 'Show', servercenter %></td>
-        <td><%= link_to 'Edit', edit_servercenter_path(servercenter) %></td>
-        <td><%= link_to 'Destroy', servercenter, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to 'Show', servercenter %><br/>
+        <%= link_to 'Edit', edit_servercenter_path(servercenter) %><br/>
+        <%= link_to 'Destroy', servercenter, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>
   </tbody>

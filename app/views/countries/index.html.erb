@@ -2,7 +2,7 @@
 
 <h1>Countries | <b><%= link_to "Home", root_path %></h1>
 
-<table>
+<table border= '1'>
   <thead>
     <tr>
       <th>Name</th>
@@ -16,9 +16,9 @@
       <tr>
         <td><%= country.name %></td>
         <td><%= country&.language&.name %></td>
-        <td><%= link_to 'Show', country %></td>
-        <td><%= link_to 'Edit', edit_country_path(country) %></td>
-        <td><%= link_to 'Destroy', country, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to 'Show', country %><br/>
+        <%= link_to 'Edit', edit_country_path(country) %><br/>
+        <%= link_to 'Destroy', country, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>
   </tbody>
