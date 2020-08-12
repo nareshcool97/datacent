@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Code:</strong>
+  <%= @servercenter.code %>
+</p>
+
+<p>
+  <strong>Servers available:</strong>
+  <%= @servercenter.server_available %>
+</p>
+
+<p>
+  <strong>Servers capacity:</strong>
+  <%= @servercenter.servers_capacity %>
+</p>
+
+<p>
+  <strong>Country:</strong>
+  <%= @servercenter&.country&.name %>
+</p>
+
+<p>
+  <strong>Language Code:</strong>
+  <%= @servercenter&.country&.language&.name %>
+</p>
+
+<%= link_to 'Edit', edit_servercenter_path(@servercenter) %> |
+<%= link_to 'Back', servercenters_path %>

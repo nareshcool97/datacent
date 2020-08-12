@@ -1,0 +1,35 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Datacenters |<b><%= link_to "Home", root_path %></h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Code</th>
+      <th>Servers available</th>
+      <th>Servers capacity</th>
+      <th>Country</th>
+      <th>Language</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @servercenters.each do |servercenter| %>
+      <tr>
+        <td><%= servercenter.code %></td>
+        <td><%= servercenter.server_available %></td>
+        <td><%= servercenter.servers_capacity %></td>
+        <td><%= servercenter&.country&.name %></td>
+        <td><%= servercenter&.country&.language&.name %></td>
+        <td><%= link_to 'Show', servercenter %></td>
+        <td><%= link_to 'Edit', edit_servercenter_path(servercenter) %></td>
+        <td><%= link_to 'Destroy', servercenter, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Servercenter', new_servercenter_path %>
